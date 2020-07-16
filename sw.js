@@ -1,7 +1,7 @@
-const version = "0.0.1b"
-const cacheName = `nothing-${version}`
+const version = "0.0.1b";
+const cacheName = `nothing-${version}`;
 
-self.addEventListener('install', e=>{
+self.addEventListener('install', e => {
     e.waitUntil(
         caches.open(cacheName).then(
                 cache => {
@@ -9,20 +9,22 @@ self.addEventListener('install', e=>{
                         `/`,
                         `/index.html`,
                         '/index.js',    
-                    ]).then(()=>self.skipWaiting());
+                    ]).then(() => self.skipWaiting());
                 }
-            )
-    )
-})
+            );
+    );
+});
 
-
+self.addEventListener('activate', event => {
+    event.waitUntil(self.clients.claim());
+});
 
 self.addEventListener('fetch', event => {
     event.respondWith(
         caches.open(cacheName).then(
-                cache => cache.match(event.request, {ignoreSearch: true})
+                cache => cache.match(event.request, { ignoreSearch: true });
             ).then(
                 response => {return response || fetch(event.request)} 
-            )
-    )
-})
+            );
+    );
+});
