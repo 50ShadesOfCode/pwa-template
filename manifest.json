@@ -1,0 +1,42 @@
+{
+    "name" : "Nothing",
+    "short_name" : "Nothing",
+    "start_url" : "/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#fff",
+    "theme_color": "#fff",
+    "icons": [
+        {
+            "src": "/res/mipmap-mdpi/ic_launcher.png",
+            "type": "image/png",
+            "sizes" : "48x48"
+        },
+        {
+            "src": "/res/mipmap-hdpi/ic_launcher.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "/res/mipmap-xhdpi/ic_launcher.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "/res/mipmap-xxhdpi/ic_launcher.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "/res/mipmap-xxxhdpi/ic_launcher.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/res/web/ic_launcher.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+
+    ]
+}
